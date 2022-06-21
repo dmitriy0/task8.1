@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.example.task81.databinding.FragmentAboutBinding
 
 class FragmentAbout : Fragment() {
 
+    private lateinit var binding: FragmentAboutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,17 +20,19 @@ class FragmentAbout : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_about, container, false)
+    ): View {
+        binding = FragmentAboutBinding.inflate(inflater)
+        return binding.root
+    }
 
-        val heroesList = view.findViewById<Button>(R.id.buttonHeroes)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        heroesList.setOnClickListener {
+        binding.buttonHeroes.setOnClickListener {
             val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             val heroesListFragment = HeroesListFragment()
             fragmentTransaction.replace(R.id.container, heroesListFragment)
             fragmentTransaction.commit()
         }
-        return view
     }
 }

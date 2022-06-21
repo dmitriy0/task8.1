@@ -39,43 +39,43 @@
             app:layout_constraintTop_toTopOf="@id/icon" />
 
         <ImageView
-            android:id="@+id/image_health"
+            android:id="@+id/imageHealth"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:layout_marginStart="16dp"
             android:src="@drawable/icon_heart"
             app:layout_constraintStart_toEndOf="@id/icon"
-            app:layout_constraintBottom_toBottomOf="@id/text_health"
-            app:layout_constraintTop_toTopOf="@id/text_health"/>
+            app:layout_constraintBottom_toBottomOf="@id/textHealth"
+            app:layout_constraintTop_toTopOf="@id/textHealth"/>
 
         <TextView
-            android:id="@+id/text_health"
+            android:id="@+id/textHealth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="TextView"
             android:textColor="#000"
             app:layout_constraintBottom_toBottomOf="@id/icon"
-            app:layout_constraintStart_toEndOf="@id/image_health" />
+            app:layout_constraintStart_toEndOf="@id/imageHealth" />
 
         <ImageView
-            android:id="@+id/image_mana"
+            android:id="@+id/imageMana"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:layout_marginStart="16dp"
             android:src="@drawable/icon_mana"
-            app:layout_constraintStart_toEndOf="@id/text_health"
-            app:layout_constraintBottom_toBottomOf="@id/text_mana"
-            app:layout_constraintTop_toTopOf="@id/text_mana"/>
+            app:layout_constraintStart_toEndOf="@id/textHealth"
+            app:layout_constraintBottom_toBottomOf="@id/textMana"
+            app:layout_constraintTop_toTopOf="@id/textMana"/>
 
         <TextView
-            android:id="@+id/text_mana"
+            android:id="@+id/textMana"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="TextView"
             android:textColor="#000"
             app:layout_constraintBottom_toBottomOf="@id/icon"
-            app:layout_constraintStart_toEndOf="@id/image_mana" />
+            app:layout_constraintStart_toEndOf="@id/imageMana" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
